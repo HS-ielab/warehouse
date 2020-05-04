@@ -10,7 +10,7 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 /**
  * 拼音工具类
  *
- * @Author: 落亦-
+ * @Author: YHS
  * @Date: 2019/12/3 10:29
  */
 public class PinyinUtils {
@@ -45,7 +45,7 @@ public class PinyinUtils {
     }
 
     public static void main(String[] args) {
-        String s = getPingYin("落亦");
+        String s = getPingYin("测试");
         System.out.println(s);
     }
 

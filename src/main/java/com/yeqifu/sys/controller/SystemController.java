@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 系统进行跳转的路由
- * @Author: 落亦-
+ * @Author: YHS
  * @Date: 2019/11/21 21:19
  */
 @Controller

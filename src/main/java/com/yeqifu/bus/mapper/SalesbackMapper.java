@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * InnoDB free: 9216 kB Mapper 接口
  * </p>
  *
- * @author luoyi-
+ * @author YHS
  * @since 2019-12-23
  */
 public interface SalesbackMapper extends BaseMapper<Salesback> {

@@ -17,7 +17,7 @@ import java.io.Serializable;
  * InnoDB free: 9216 kB; (`providerid`) REFER `warehouse/bus_provider`(`id`); (`goo 服务实现类
  * </p>
  *
- * @author luoyi-
+ * @author YHS
  * @since 2019-12-18
  */
 @Service

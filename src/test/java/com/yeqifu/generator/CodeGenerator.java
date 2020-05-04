@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  * mp生成器
- * @Author: 落亦-
+ * @Author: YHS
  * @Date: 2019/11/18 14:22
  */
 public class CodeGenerator {
@@ -45,7 +45,7 @@ public class CodeGenerator {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setAuthor("luoyi-");
+        gc.setAuthor("YHS");
         gc.setOpen(false);  //当代码生成完成之后是否打开代码所在的文件夹
         // gc.setSwagger2(true); 实体属性 Swagger2 注解
         mpg.setGlobalConfig(gc);

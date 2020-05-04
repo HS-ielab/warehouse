@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 
 /**
- * @Author: 落亦-
+ * @Author: YHS
  * @Date: 2019/11/23 19:16
  */
 @Configuration

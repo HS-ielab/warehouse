@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
  * InnoDB free: 9216 kB; (`providerid`) REFER `warehouse/bus_provider`(`id`) Mapper 接口
  * </p>
  *
- * @author luoyi-
+ * @author YHS
  * @since 2019-12-06
  */
 public interface GoodsMapper extends BaseMapper<Goods> {

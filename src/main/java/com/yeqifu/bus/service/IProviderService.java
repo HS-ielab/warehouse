@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * InnoDB free: 9216 kB 服务类
  * </p>
  *
- * @author luoyi-
+ * @author YHS
  * @since 2019-12-05
  */
 public interface IProviderService extends IService<Provider> {

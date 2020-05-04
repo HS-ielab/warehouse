@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * InnoDB free: 9216 kB; (`providerid`) REFER `warehouse/bus_provider`(`id`) 服务类
  * </p>
  *
- * @author luoyi-
+ * @author YHS
  * @since 2019-12-06
  */
 public interface IGoodsService extends IService<Goods> {

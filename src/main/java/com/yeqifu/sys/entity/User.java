@@ -18,7 +18,7 @@ import java.util.Date;
  * InnoDB free: 9216 kB; (`deptid`) REFER `warehouse/sys_dept`(`id`) ON UPDATE CASC
  * </p>
  *
- * @author luoyi-
+ * @author YHS
  * @since 2019-11-21
  */
 @Data
