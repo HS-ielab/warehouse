@@ -1,5 +1,5 @@
 ## 系统名称 
-仓库管理系统 warehouse 项目访问地址:http://39.97.177.219:8888/ 白嫖的阿里云服务器，20年7月份过期，各位可以看看项目运行的效果 admin 123456
+仓库管理系统 warehouse
 ### 系统概要
 仓库管理系统总共分为两个大的模块，分别是系统模块和业务模块。其中系统模块和业务模块底下又有其子模块。
 ### 功能模块
@@ -69,40 +69,5 @@
 
 ### 预览效果
 登陆页面
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/login.PNG)
-部门管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/dept.PNG)
-菜单管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/menu.PNG)
-权限管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/permission.PNG)
-角色管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/role.PNG)
-用户管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/user.PNG)
-登陆日志管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/loginfo.PNG)
-系统公告管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/notice.PNG)
-缓存管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/cache.PNG)
-客户管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/customer.PNG)
-供应商管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/provider.PNG)
-商品管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/goods.PNG)
-商品进货管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/inport.PNG)
-商品退货管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/output.PNG)
-商品销售管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/sales.PNG)
-商品销售退货管理
-![](https://github.com/yeqifu/warehouse/blob/master/src/main/resources/static/images/salesback.PNG)
 
-### 讨论
-有问题请在([issue])中讨论
-### 作者
-yeqifu
 
