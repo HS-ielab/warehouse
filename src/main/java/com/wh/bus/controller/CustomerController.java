@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wh.bus.entity.Customer;
 import com.wh.bus.service.ICustomerService;
 import com.wh.bus.vo.CustomerVo;
+import com.wh.data.BaseDaoJooQ;
 import com.wh.sys.common.Constast;
 import com.wh.sys.common.DataGridView;
 import com.wh.sys.common.ResultObj;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -38,29 +40,40 @@ public class CustomerController {
 
     /**
      * 查询所有的客户
+     *
      * @param customerVo
      * @return
      */
     @RequestMapping("loadAllCustomer")
-    public DataGridView loadAllCustomer(CustomerVo customerVo){
+    public DataGridView loadAllCustomer(CustomerVo customerVo) {
         //1.声明一个分页page对象
-        IPage<Customer> page = new Page(customerVo.getPage(),customerVo.getLimit());
+        IPage<Customer> page = new Page(customerVo.getPage(), customerVo.getLimit());
         //2.声明一个queryWrapper
         QueryWrapper<Customer> queryWrapper = new QueryWrapper();
-        queryWrapper.like(StringUtils.isNotBlank(customerVo.getCustomername()),"customername",customerVo.getCustomername());
-        queryWrapper.like(StringUtils.isNotBlank(customerVo.getConnectionpersion()),"connectionpersion",customerVo.getConnectionpersion());
-        queryWrapper.like(StringUtils.isNotBlank(customerVo.getPhone()),"phone",customerVo.getPhone());
-        customerService.page(page,queryWrapper);
-        return new DataGridView(page.getTotal(),page.getRecords());
+        queryWrapper.like(StringUtils.isNotBlank(customerVo.getCustomername()), "customername", customerVo.getCustomername());
+        queryWrapper.like(StringUtils.isNotBlank(customerVo.getConnectionpersion()), "connectionpersion", customerVo.getConnectionpersion());
+        queryWrapper.like(StringUtils.isNotBlank(customerVo.getPhone()), "phone", customerVo.getPhone());
+        customerService.page(page, queryWrapper);
+        return new DataGridView(page.getTotal(), page.getRecords());
+    }
+
+
+    @Resource
+    private BaseDaoJooQ baseDao;
+
+    @RequestMapping("loadAllCustomerByJooq")
+    public String loadAllCutomersByJooq() {
+        return "finished";
     }
 
     /**
      * 添加一个客户
+     *
      * @param customerVo
      * @return
      */
     @RequestMapping("addCustomer")
-    public ResultObj addCustomer(CustomerVo customerVo){
+    public ResultObj addCustomer(CustomerVo customerVo) {
         try {
             customerService.save(customerVo);
             return ResultObj.ADD_SUCCESS;
@@ -72,11 +85,12 @@ public class CustomerController {
 
     /**
      * 修改一个客户
+     *
      * @param customerVo
      * @return
      */
     @RequestMapping("updateCustomer")
-    public ResultObj updateCustomer(CustomerVo customerVo){
+    public ResultObj updateCustomer(CustomerVo customerVo) {
         try {
             customerService.updateById(customerVo);
             return ResultObj.UPDATE_SUCCESS;
@@ -88,13 +102,14 @@ public class CustomerController {
 
     /**
      * 删除一个客户
+     *
      * @param id 客户的ID
      * @return
      */
-    @ApiOperation(value = "删除一个客户",notes = "删除一个客户")
-    @ApiImplicitParams({@ApiImplicitParam(name = "id", value = "客户ID",required = true,paramType = "query",dataType = "Integer")})
-    @RequestMapping(value = "deleteCustomer",method = RequestMethod.DELETE)
-    public ResultObj deleteCustomer(Integer id){
+    @ApiOperation(value = "删除一个客户", notes = "删除一个客户")
+    @ApiImplicitParams({@ApiImplicitParam(name = "id", value = "客户ID", required = true, paramType = "query", dataType = "Integer")})
+    @RequestMapping(value = "deleteCustomer", method = RequestMethod.DELETE)
+    public ResultObj deleteCustomer(Integer id) {
         try {
             customerService.deleteCustomerById(id);
             return ResultObj.DELETE_SUCCESS;
@@ -107,10 +122,11 @@ public class CustomerController {
 
     /**
      * 加载所有客户的下拉列表
+     *
      * @return
      */
     @RequestMapping("loadAllCustomerForSelect")
-    public DataGridView loadAllCustomerForSelect(){
+    public DataGridView loadAllCustomerForSelect() {
         QueryWrapper<Customer> queryWrapper = new QueryWrapper<Customer>();
         queryWrapper.eq("available", Constast.AVAILABLE_TRUE);
         List<Customer> list = customerService.list(queryWrapper);
